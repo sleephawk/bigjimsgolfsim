@@ -1,0 +1,149 @@
+/* Golf sim landing page
+   Palette: dark green + gold. Type: Inter. */
+
+:root {
+  --bg-outer: #070f0b;
+  --bg-card: #0b1b13;
+  --bg-badge: #122a1e;
+  --gold: #d4af37;
+  --text-heading: #f1f5f9;
+  --text-muted: #8a9b90;
+
+  --radius: 20px;
+  --font: "Inter", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  font-family: var(--font);
+  color: var(--text-heading);
+  background-color: var(--bg-outer);
+  background-image:
+    radial-gradient(circle at 20% 20%, var(--bg-badge), transparent 45%),
+    radial-gradient(circle at 80% 80%, var(--bg-card), transparent 50%),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(212, 175, 55, 0.08),
+      transparent 40%
+    );
+  background-size: 200% 200%;
+  animation: drift 18s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 680px;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  animation: rise 0.8s ease-out both;
+}
+
+.hero {
+  background: var(--bg-outer);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  /* border-radius: 50px; */
+  margin: 20px;
+  border: 1px solid var(--text-muted);
+  border-radius: 50px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.badge {
+  z-index: 2;
+  position: relative;
+  border: solid 1px var(--text-muted);
+  width: 80%;
+  align-self: center;
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--bg-badge);
+  border-radius: 999px;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+}
+
+.tagline {
+  margin: 0 0 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.logo-box {
+  max-width: 50%;
+  align-self: center;
+}
+
+.logo {
+  width: 50%;
+}
+
+iframe {
+  align-self: center;
+  display: block;
+  border: 1px solid #ccc;
+  width: 90%;
+  height: 600px;
+  border: 0;
+  background: var(--text-heading);
+  border-radius: 50px;
+  padding: 20px;
+  position: relative;
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .card {
+    animation: none;
+  }
+}
