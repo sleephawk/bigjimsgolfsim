@@ -56,20 +56,19 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  max-width: 680px;
+  max-width: 70%;
   padding: clamp(1.5rem, 5vw, 3rem);
   text-align: center;
   animation: rise 0.8s ease-out both;
 }
 
 .hero {
-  background: var(--bg-outer);
+  /* background: var(--bg-outer); */
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
   /* border-radius: 50px; */
-  margin: 20px;
-  border: 1px solid var(--text-muted);
+  margin: 20px 0 10px 0;
+  /* border: 1px solid var(--text-muted); */
   border-radius: 50px;
 }
 
@@ -84,7 +83,7 @@ body {
   }
 }
 
-.badge {
+/* .badge {
   z-index: 2;
   position: relative;
   border: solid 1px var(--text-muted);
@@ -99,11 +98,11 @@ body {
   color: var(--gold);
   background: var(--bg-badge);
   border-radius: 999px;
-}
+} */
 
 h1 {
   margin: 0 0 0.75rem;
-  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -114,7 +113,7 @@ h1 {
   margin: 0 0 2rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--text-muted);
+  color: var(--gold);
   text-align: center;
 }
 
@@ -131,19 +130,24 @@ iframe {
   align-self: center;
   display: block;
   border: 1px solid #ccc;
-  width: 90%;
+  width: 100%;
   height: 600px;
   border: 0;
   background: var(--text-heading);
   border-radius: 50px;
   padding: 20px;
   position: relative;
-  z-index: -1;
 }
 
 @media (prefers-reduced-motion: reduce) {
   body,
   .card {
     animation: none;
+  }
+}
+
+@media (max-width: 1250px) {
+  .main {
+    max-width: unset;
   }
 }
