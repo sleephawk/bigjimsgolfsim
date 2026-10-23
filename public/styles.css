@@ -120,6 +120,7 @@ h1 {
 .logo-box {
   max-width: 50%;
   align-self: center;
+  margin-bottom: 10px;
 }
 
 .logo {
