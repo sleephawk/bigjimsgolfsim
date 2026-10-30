@@ -22,6 +22,7 @@
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
@@ -38,6 +39,22 @@ body {
     );
   background-size: 200% 200%;
   animation: drift 18s ease-in-out infinite;
+}
+
+header {
+  /* border: solid blue 10px; */
+  width: 100%;
+  padding: 3px 10px;
+}
+
+#contact {
+  /* border: solid blue 10px; */
+  color: var(--gold);
+  cursor: pointer;
+}
+
+#contact:hover {
+  color: var(--text-heading);
 }
 
 @keyframes drift {
