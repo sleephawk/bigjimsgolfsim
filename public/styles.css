@@ -76,9 +76,11 @@ header {
 
 #contact-section {
   opacity: 0;
+  align-self: center;
   display: none;
-  line-height: 3;
-  font-size: larger;
+  line-height: 2;
+  font-size: medium;
+  width: 80%;
   transition: opacity var(--fade) ease;
 }
 
@@ -277,11 +279,11 @@ td::before {
   }
 }
 
-  #tally,
-  #contact-section,
-  #membership-details-section {
-    transition: opacity 0.5s linear;
-  }
+#tally,
+#contact-section,
+#membership-details-section {
+  text-align: center;
+  transition: opacity 0.5s linear;
 }
 
 @media (max-width: 1250px) {
