@@ -16,9 +16,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <header>
-    <a id="contact">Contact</a>
-    |
-    <a id="contact">Membership Details</a>
+    <a id="home-link" class="link">Home</a>
+    <span class="header-divider">|</span>
+    <a id="contact-link" class="link">Contact</a>
+    <span class="header-divider">|</span>
+    
+    <a id="membership-details-link" class="link">Membership Details</a>
   </header>
   <body>
     <main class="main">
@@ -30,6 +33,12 @@
           Big Jim's <br /><span style="font-weight: lighter">Golf Sim</span>
         </h1>
       </div>
+      <section id="contact-section">
+        <p>Want to get in contact? Send us your queries at:
+          <br>
+          <a href="mailto:contact@bigjimsgolfsim.co.uk" target="_blank" rel="noopener norefferer">contact@bigjimsgolfsim.co.uk</a>
+        </p>
+      </section>
       <iframe id="tally"
         data-tally-src="https://tally.so/embed/xXkeNk?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
         loading="lazy"
@@ -40,12 +49,63 @@
         marginwidth="0"
         title="Big Jim's Golf Sim (Camberwell) - Pre-registration."
       ></iframe>
-      <section id="contact">
-        
-      </section>
-      <section id="membership-details">
 
       </section>
+      <section id="membership-details-section">
+        <table>
+  <thead>
+    <tr>
+      <th scope="col">Tier</th>
+      <th scope="col">Price / Month</th>
+      <th scope="col">Intended Audience</th>
+      <th scope="col">Access Window</th>
+      <th scope="col">Advance Booking Window</th>
+      <th scope="col">Rolling Active Bookings Limit</th>
+      <th scope="col">Daily Time Allowance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Founding Member (Unlimited)</th>
+      <td data-label="Price / Month"><strong>£135/mo</strong> <em>(Locked forever for first 60)</em></td>
+      <td data-label="Intended Audience">Core local golfers, avid practice players, locals</td>
+      <td data-label="Access Window">7 Days a Week (6:00 AM – 11:00 PM)</td>
+      <td data-label="Advance Booking Window"><strong>14 Days</strong> in advance</td>
+      <td data-label="Rolling Active Bookings Limit"><strong>Max 2 active</strong> future bookings at any time</td>
+      <td data-label="Daily Time Allowance"><strong>Max 1.5 hrs/day</strong> during Peak; 2 hrs/day Off-Peak</td>
+    </tr>
+    <tr>
+      <th scope="row">Standard Unlimited</th>
+      <td data-label="Price / Month"><strong>£150/mo</strong> <em>(Offered post-launch after initial 60 fill)</em></td>
+      <td data-label="Intended Audience">Standard recurring members</td>
+      <td data-label="Access Window">7 Days a Week (6:00 AM – 11:00 PM)</td>
+      <td data-label="Advance Booking Window"><strong>10 Days</strong> in advance</td>
+      <td data-label="Rolling Active Bookings Limit"><strong>Max 2 active</strong> future bookings at any time</td>
+      <td data-label="Daily Time Allowance"><strong>Max 1.5 hrs/day</strong> during Peak; 2 hrs/day Off-Peak</td>
+    </tr>
+    <tr>
+      <th scope="row">Off-Peak Member</th>
+      <td data-label="Price / Month"><strong>£85/mo</strong></td>
+      <td data-label="Intended Audience">Shift workers, remote workers, retirees, flexible schedules</td>
+      <td data-label="Access Window">Mon–Fri (<strong>6:00 AM – 4:00 PM</strong> strictly)</td>
+      <td data-label="Advance Booking Window"><strong>7 Days</strong> in advance</td>
+      <td data-label="Rolling Active Bookings Limit"><strong>Max 2 active</strong> future bookings at any time</td>
+      <td data-label="Daily Time Allowance"><strong>Max 2 hrs/day</strong> (Off-Peak hours only)</td>
+    </tr>
+    <tr>
+      <th scope="row">PAYG / Visitor</th>
+      <td data-label="Price / Month"><strong>£45/hour</strong></td>
+      <td data-label="Intended Audience">Casual players, guests, non-members testing the space</td>
+      <td data-label="Access Window">Any available open slot</td>
+      <td data-label="Advance Booking Window"><strong>5 Days</strong> in advance</td>
+      <td data-label="Rolling Active Bookings Limit">Pay per booking (Up-front card payment)</td>
+      <td data-label="Daily Time Allowance">Unrestricted (subject to payment &amp; bay availability)</td>
+    </tr>
+  </tbody>
+</table>
+      </section>
+    
+      <script src="script.js"></script>
       <script>
         var d = document,
           w = "https://tally.so/widgets/embed.js",
